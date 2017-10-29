@@ -90,9 +90,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Superuser
-WITH_SU := true
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS := device/bq/krillin/overlay
 
