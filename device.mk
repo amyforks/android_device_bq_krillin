@@ -67,9 +67,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
     $(LOCAL_PATH)/configs/etc/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
     $(LOCAL_PATH)/configs/usr/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
-    $(LOCAL_PATH)/configs/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/configs/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/configs/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
     $(LOCAL_PATH)/configs/etc/ecc_list.xml:system/etc/ecc_list.xml \
     $(LOCAL_PATH)/configs/etc/apns-conf.xml:system/etc/apns-conf.xml \
     $(LOCAL_PATH)/configs/etc/spn-conf.xml:system/etc/spn-conf.xml \
@@ -114,7 +111,6 @@ PRODUCT_PACKAGES += \
 # Mediatek Wlan Packages
 PRODUCT_PACKAGES += \
     libwpa_client \
-    hostapd \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
