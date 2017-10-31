@@ -108,10 +108,10 @@ PRODUCT_PACKAGES += \
 # Mediatek Wlan Packages
 PRODUCT_PACKAGES += \
     libwpa_client \
-    dhcpcd.conf \
-    wpa_supplicant \
+    dhcpcd.conf
+    #wpa_supplicant \
     wpa_supplicant.conf
-	
+
 PRODUCT_PACKAGES += \
     librs_jni \
 
