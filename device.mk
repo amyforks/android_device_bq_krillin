@@ -99,8 +99,9 @@ PRODUCT_PACKAGES += \
     tinymix
 
 # Mediatek Wlan Packages
-#PRODUCT_PACKAGES += \
-    libwpa_client¸\
+PRODUCT_PACKAGES += \
+    hostapd \
+    libwpa_client \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
