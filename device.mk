@@ -15,7 +15,7 @@
 # Inherit lineage os necessary things
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, device/common/gps/gps_us_supl.mk) 
+# $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Call krillin vendor
 $(call inherit-product, vendor/bq/krillin/krillin-vendor.mk)
@@ -44,7 +44,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -125,7 +124,7 @@ PRODUCT_PACKAGES += \
     libtinyxml
 
 # GPS package
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     gps.mt6582
 
 # Shims for krillin
@@ -167,3 +166,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Logd Tool
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/tools/logd:system/bin/logd
+
+PRODUCT_PACKAGES += \
+    libcurl
