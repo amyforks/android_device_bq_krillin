@@ -2,13 +2,14 @@
 #<src>           <mnt_point>         <type>    <mnt_flags and options>                 <fs_mgr_flags>
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
-/emmc@android     /system             ext4      ro                                                          wait
-/emmc@usrdata     /data               ext4      noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check,resize
-/emmc@usrdata     /data               f2fs      nosuid,nodev,noatime,inline_xattr                           wait,check,resize,encryptable=/dev/encrypt
-/emmc@cache       /cache              ext4      noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check
-/emmc@cache       /cache              f2fs      nosuid,nodev,noatime,inline_xattr                           wait,check
+/dev/block/mmcblk0p5     /system             ext4      ro                                                          wait
+/dev/block/mmcblk0p7     /data               ext4      noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check,resize
+/dev/block/mmcblk0p7     /data               f2fs      nosuid,nodev,noatime,inline_xattr                           wait,check,resize,encryptable=/dev/encrypt
+/dev/block/mmcblk0p6     /cache              ext4      noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check
+/dev/block/mmcblk0p6     /cache              f2fs      nosuid,nodev,noatime,inline_xattr                           wait,check
+/dev/bootimg             /boot
 /emmc@protect_f   /protect_f          ext4      noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc    wait,check,autoformat
-/emmc@protect_s   /protect_s          ext4      noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc    wait,check,autoformat
+   /protect_s          ext4      noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc    wait,check,autoformat
 /devices/platform/mtk-msdc.1/mmc_host*		auto	auto	defaults		voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/mt_usb		auto 	auto	defaults	voldmanaged=usb:auto
+/devices/platform/mt_usb		auto	auto	defaults	voldmanaged=usb:auto
 /dev/block/zram0  none               swap      defaults    zramsize=536870912,zramstreams=4
